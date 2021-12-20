@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
 * {
-    margin:  0;
-    border:  0;
+    margin: 0;
+    border: 0;
     padding: 0;
     outline: 0;
 
-    list-style:      none;
+    list-style: none;
     text-decoration: none;
-    text-rendering:  optimizeLegibility;
+    text-rendering: optimizeLegibility;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -32,7 +32,7 @@
 }
 
 :root {
-    --accent: crimson;
+    --accent: #6e8daf;
     --bg: #0f0f12;
 }
 
@@ -49,7 +49,8 @@ body {
     background: none;
 }
 
-#panels, #panels ul,
+#panels,
+#panels ul,
 #panels .links {
     position: absolute;
 }
@@ -75,7 +76,7 @@ body {
     top: 0;
     bottom: 0;
     margin: auto;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     background: #18181d;
 }
 
@@ -85,8 +86,8 @@ body {
     width: 100%;
     height: 100%;
     right: 100%;
-    background: #fff url("../img/bg-1.gif") repeat left;
-    transition: all .6s;
+    background: #fff url('../img/bg-1.gif') repeat left;
+    transition: all 0.6s;
     animation: scroll 25s ease-in-out infinite;
 }
 
@@ -97,7 +98,7 @@ body {
 }
 
 #panels ul:nth-child(2) {
-    --flavour: #16a2a2;
+    --flavour: #fcb3a3;
 }
 
 #panels ul:nth-child(3) {
@@ -108,8 +109,12 @@ body {
     box-shadow: inset -1px 0 var(--flavour);
 }
 
-#panels ul:nth-child(2) { background: #fff url("../img/bg-2.gif") repeat center left fixed; }
-#panels ul:nth-child(3) { background: #fff url("../img/bg-3.gif") repeat center left fixed; }
+#panels ul:nth-child(2) {
+    background: #fff url('../img/bg-2.gif') repeat center left fixed;
+}
+#panels ul:nth-child(3) {
+    background: #fff url('../img/bg-3.gif') repeat center left fixed;
+}
 
 #panels ul[active] {
     right: 0;
@@ -129,20 +134,23 @@ body {
     color: #bfbfbf;
     text-decoration: none;
     font: 700 18px 'Roboto', sans-serif;
-    transition: all .2s;
+    transition: all 0.2s;
     display: inline-block;
-    padding: .4em .7em;
-    background: rgba(0, 0, 0, .35);
-    box-shadow: 0 3px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, .5);
+    padding: 0.4em 0.7em;
+    background: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 3px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
-    margin-bottom: .7em;
+    margin-bottom: 0.7em;
 }
 
-#panels > ul:first-child .links a:not(:last-child) { margin-right: .3em }
+#panels > ul:first-child .links a:not(:last-child) {
+    margin-right: 0.3em;
+}
 
 #panels > ul:first-child .links a:hover {
     transform: scale(1.2);
-    box-shadow: 0 0 rgba(0, 0, 0, 0.25), 0 0 0 rgba(0, 0, 0, .5), 0 -4px 5px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 rgba(0, 0, 0, 0.25), 0 0 0 rgba(0, 0, 0, 0.5),
+        0 -4px 5px rgba(0, 0, 0, 0.1);
     color: #fff;
 }
 
@@ -173,8 +181,8 @@ body {
 }
 
 #panels > ul:first-child .links li:not(:last-child) {
-    box-shadow: 0 1px 0 rgba(255, 255, 255, .07);
-    padding: 0 0 .5em 0;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07);
+    padding: 0 0 0.5em 0;
     margin-bottom: 1.5em;
 }
 
@@ -189,7 +197,7 @@ body {
 }
 
 #panels > ul:not(:first-child) li {
-    padding: .5em;
+    padding: 0.5em;
 }
 
 #panels > ul:not(:first-child) li a {
@@ -222,7 +230,7 @@ status-bar {
     height: 32px;
     background: #18181d;
     border-radius: 4px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 todo-list {
@@ -238,6 +246,6 @@ todo-list::after {
     left: 0;
     width: 1px;
     height: 100%;
-    background: rgba(255, 255, 255, .1);
+    background: rgba(255, 255, 255, 0.1);
     z-index: 4;
 }
