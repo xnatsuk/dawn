@@ -98,7 +98,7 @@ class Statusbar extends Component {
       #tabs ul li[active]:nth-child(3) ~ li:last-child { margin: 0 0 0 70px; }
 
       #tabs ul li[active]:nth-child(2) ~ li:last-child {
-          --flavour: #16a2a2;
+          --flavour: #fcb3a3;
       }
 
       #tabs ul li[active]:nth-child(3) ~ li:last-child {
