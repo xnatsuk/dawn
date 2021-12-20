@@ -24,7 +24,7 @@ class Clock extends Component {
         }
 
         .clock-icon {
-            color: #ff7b95;
+            color: #fcb3a3;
             font-size: 10pt;
             margin-right: 10px;
             margin-bottom: 1px;
