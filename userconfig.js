@@ -5,10 +5,10 @@ const GLOBAL_CONFIG = new Config({
     refreshIn: 60
   },
   temperature: {
-    location: 'New York',
+    location: 'Brasília',
     scale: 'C'
   },
-  clock: 'h:i p',
+  clock: 'hi',
   search: {
     engines: {
       g: ['https://google.com/search?q=', 'Google'],
@@ -18,5 +18,5 @@ const GLOBAL_CONFIG = new Config({
       w: ['https://en.wikipedia.org/w/index.php?search=', 'Wikipedia']
     }
   },
-  disabled: []
+  disabled: ['todo-list']
 });
