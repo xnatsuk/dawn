@@ -123,7 +123,7 @@ const CONFIG = new Config({
           name: 'subreddits',
           links: [
             {
-              name: 'r/startpages/',
+              name: 'r/startpages',
               url: 'https://www.reddit.com/r/startpages/'
             },
             {
