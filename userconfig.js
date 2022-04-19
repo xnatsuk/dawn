@@ -45,10 +45,6 @@ const CONFIG = new Config({
           {
             name: 'steam',
             url: 'https://steamcommunity.com/my/profile'
-          },
-          {
-            name: '/a/',
-            url: 'https://4chan.org/a/'
           }
         ]
       },
@@ -93,6 +89,7 @@ const CONFIG = new Config({
       background_url: 'src/img/banners/bg-2.gif',
       categories: [
         {
+          name: 'media',
           links: [
             {
               url: 'https://www.spotify.com',
@@ -123,6 +120,7 @@ const CONFIG = new Config({
       background_url: 'src/img/banners/bg-3.gif',
       categories: [
         {
+          name: 'subreddits',
           links: [
             {
               name: 'r/startpages/',
@@ -131,12 +129,6 @@ const CONFIG = new Config({
             {
               name: 'r/unixporn',
               url: 'https://www.reddit.com/r/unixporn/'
-            },
-            {
-              name: 'r/mechkbds/',
-              url: 'https://www.reddit.com/r/MechanicalKeyboards/',
-              icon: 'keyboard',
-              icon_color: '#a57685'
             },
             {
               name: 'r/programming',
@@ -149,7 +141,12 @@ const CONFIG = new Config({
             {
               name: 'r/desktops',
               url: 'https://www.reddit.com/r/desktops/'
-            },
+            }
+          ]
+        },
+          {
+            name: 'others',
+            links: [
             {
               name: 'codewars',
               url: 'https://www.codewars.com/dashboard'
