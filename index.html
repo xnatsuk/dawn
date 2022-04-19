@@ -7,65 +7,12 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200|Roboto:100,400,700" rel="stylesheet">
     <link href="https://cdn.cryptofonts.com/1.3.5/cryptofont.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/@tabler/icons@1.53.0/iconfont/tabler-icons.min.css">
     <link href="src/css/style.css" rel="stylesheet" type="text/css">
     <title>家</title>
   </head>
   <body>
-    <div id="links" class="-">
-      <status-bar class="!-"></status-bar>
-
-      <div id="panels">
-        <ul class="家" active>
-          <div class="links">
-            <li>
-              <h1>Fun</h1>
-              <a href="https://twitter.com/home" target="_blank">twitter</a>
-              <a href="https://www.reddit.com/" target="_blank">reddit</a>
-              <a href="https://mail.google.com/" target="_blank">gmail</a>
-              <a href="https://www.notion.so/" target="_blank">notion</a>
-              <a href="https://steamcommunity.com/my/profile" target="_blank">steam</a>
-            </li>
-            <li>
-              <h1>Comfy</h1>
-              <a href="https://www.netflix.com/" target="_blank">netflix</a>
-              <a href="https://www.twitch.tv/" target="_blank">twitch</a>
-            </li>
-            <li>
-              <h1>Misc</h1>
-              <a href="https://github.com/" target="_blank">github</a>
-              <a href="https://www.freecodecamp.org/" target="_blank">freecodecamp</a>
-              <a href="https://dev.to" target="_blank">dev.to</a>
-              <a href="https://cvnflix.com/" target="_blank">cvnflix</a>
-            </li>
-          </div>
-        </ul>
-        <ul class="メディア">
-          <div class="links">
-            <li><a href="https://soundcloud.com/" target="_blank">soundcloud</a></li>
-            <li><a href="https://youtu.be" target="_blank">youtu.be</a></li>
-            <li><a href="https://www.spotify.com" target="_blank">spotify</a></li>
-            <li><a href="https://boards.4channel.org/mu/" target="_blank">/mu/</a></li>
-            <li><a href="https://www.pixiv.net/en/" target="_blank">pixiv</a></li>
-          </div>
-        </ul>
-        <ul class="テクノロジー">
-          <div class="links">
-            <li><a href="https://www.reddit.com/r/startpages/" target="_blank">r/startpages</a></li>
-            <li><a href="https://www.reddit.com/r/unixporn/" target="_blank">r/unixporn</a></li>
-            <li><a href="https://www.reddit.com/r/learnprogramming/" target="_blank">r/learnprogramming</a></li>
-            <li><a href="https://www.reddit.com/r/FirefoxCSS/" target="_blank">r/firefoxcss</a></li>
-            <li><a href="https://www.reddit.com/r/desktops/" target="_blank">r/desktops</a></li>
-            <li><a href="https://www.codewars.com/dashboard" target="_blank">codewars</a></li>
-            <li><a href="https://www.keybr.com/" target="_blank">keybr</a></li>
-            <li><a href="https://ezgif.com/" target="_blank">ezgif</a></li>
-            <li><a href="https://colorpicker.me" target="_blank">color picker</a></li>
-
-          </div>
-        </ul>
-        <search-bar></search-bar>
-      </div>
-    </div>
-
+    <tabs-list></tabs-list>
     <todo-list class="|" id="todo"></todo-list>
 
     <script type="text/javascript" src="src/common/utils.js"></script>
@@ -78,6 +25,9 @@
 
     <script type="text/javascript" src="./userconfig.js"></script>
 
+    <script type="text/javascript" src="src/components/tabs/tabs.component.js"></script>
+    <script type="text/javascript" src="src/components/todo/task-priority.component.js"></script>
+    <script type="text/javascript" src="src/components/todo/task-edit.component.js"></script>
     <script type="text/javascript" src="src/components/todo/task.component.js"></script>
     <script type="text/javascript" src="src/components/todo/todo.component.js"></script>
 
