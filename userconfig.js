@@ -39,10 +39,6 @@ const CONFIG = new Config({
             url: 'https://mail.google.com/'
           },
           {
-            name: 'notion',
-            url: 'https://www.notion.so/'
-          },
-          {
             name: 'steam',
             url: 'https://steamcommunity.com/my/profile'
           }
@@ -58,6 +54,10 @@ const CONFIG = new Config({
           {
             name: 'twitch',
             url: 'https://www.twitch.tv/'
+          },
+          {
+            name: 'prime video',
+            url: 'https://www.primevideo.com/'
           }
         ]
       },
@@ -69,16 +69,16 @@ const CONFIG = new Config({
             url: 'https://github.com/',
           },
           {
-            name: 'freecodecamp',
-            url: 'https://www.freecodecamp.org/'
+            name: 'notion',
+            url: 'https://www.notion.so/'
           },
           {
             name: 'dev.to',
             url: 'https://dev.to'
           },
           {
-            name: 'the odin project',
-            url: 'https://www.theodinproject.com/'
+            name: 'overseerr',
+            url: 'https://overseerr.cvnflix.com/'
           }
         ]
       }
@@ -110,6 +110,27 @@ const CONFIG = new Config({
             {
               url: 'https://www.pixiv.net/en/',
               name: 'pixiv'
+            }
+          ]
+        },
+        {
+          name: 'study',
+          links: [
+            {
+              name: 'the odin project',
+              url: 'https://www.theodinproject.com/'
+            },
+            {
+              name: 'freecodecamp',
+              url: 'https://www.freecodecamp.org/'
+            },
+            {
+              name: 'udemy',
+              url:'https://www.udemy.com/home/my-courses/learning/'
+            },
+            {
+              name: 'coursera',
+              url: 'https://www.udemy.com/home/my-courses/learning/'
             }
           ]
         }
