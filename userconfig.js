@@ -130,7 +130,7 @@ const CONFIG = new Config({
             },
             {
               name: 'coursera',
-              url: 'https://www.udemy.com/home/my-courses/learning/'
+              url: 'https://www.coursera.org/'
             }
           ]
         }
