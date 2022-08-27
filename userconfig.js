@@ -58,6 +58,18 @@ const CONFIG = new Config({
           {
             name: 'prime video',
             url: 'https://www.primevideo.com/'
+          },
+          {
+            name: 'arrumar o valorant 1',
+            url: 'https://www.youtube.com/watch?v=gjIr2hzBlzg'
+          },
+          {
+            name: 'arrumar o valorant 2',
+            url: 'https://www.youtube.com/watch?v=uRC62vAoQCo'
+          },
+          {
+            name: 'arrumar o valorant 3',
+            url: 'https://www.youtube.com/watch?v=4VBCCpwUKfE'
           }
         ]
       },
