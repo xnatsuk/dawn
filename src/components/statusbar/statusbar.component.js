@@ -4,8 +4,12 @@ class Statusbar extends Component {
   refs = {
     categories: '.categories ul',
     tabs: '#tabs ul li',
-    indicator: '.indicator'
+    indicator: '.indicator',
+    addTab: '.add-tab'
   };
+
+  modal;
+  currentTabIndex = 0;
 
   constructor() {
     super();
@@ -17,6 +21,10 @@ class Statusbar extends Component {
     this.externalRefs = {
       categories: this.parentNode.querySelectorAll(this.refs.categories)
     };
+  }
+
+  setAttributes() {
+    this.modal = RenderedComponents['modal-popup'];
   }
 
   imports() {
@@ -96,6 +104,8 @@ class Statusbar extends Component {
 
       #tabs ul li[active]:nth-child(2) ~ li:last-child { margin: 0 0 0 35px; }
       #tabs ul li[active]:nth-child(3) ~ li:last-child { margin: 0 0 0 70px; }
+      #tabs ul li[active]:nth-child(4) ~ li:last-child { margin: 0 0 0 105px; }
+      #tabs ul li[active]:nth-child(5) ~ li:last-child { margin: 0 0 0 140px; }
 
       #tabs ul li[active]:nth-child(2) ~ li:last-child {
           --flavour: #fcb3a3;
@@ -139,8 +149,7 @@ class Statusbar extends Component {
 
       #tabs > cols {
           position: relative;
-          /* grid-template-columns: [add-tab] 35px [tabs] auto [widgets] auto; */
-          grid-template-columns: [tabs] auto [widgets] auto;
+          grid-template-columns: [add-tab] 35px [tabs] auto [widgets] auto;
       }
 
       #tabs .time span {
@@ -174,7 +183,8 @@ class Statusbar extends Component {
       }
 
       .add-tab-icon {
-          font-size: 13pt;
+          font-size: 12pt;
+          font-weight: bold;
       }
     `;
   }
@@ -183,11 +193,10 @@ class Statusbar extends Component {
     return `
         <div id="tabs">
             <cols>
-                <!-- TODO: Add tab button
+
                 <button class="+ add-tab">
                   <span class="material-icons add-tab-icon">add</span>
                 </button>
-                -->
                 <ul class="- indicator"></ul>
                 <div class="+ widgets col-end">
                     <crypto-rate class="+ widget"></crypto-rate>
@@ -199,23 +208,57 @@ class Statusbar extends Component {
   }
 
   setEvents() {
+    // this.refs.addTab.onclick = () => this.addNewTab();
+
     this.refs.tabs.forEach(tab =>
-      tab.onclick = ({ target }) =>
-        this.activateByKey(Number(target.getAttribute('tab-index'))));
+      tab.onclick = ({ target }) => this.handleTabChange(target));
 
-    document.onkeydown = (e) => {
-      if (e !== undefined) {
-        let { key } = e;
+    document.onkeydown = (e) => this.handleKeyPress(e);
 
-        if (Number.isInteger(parseInt(key)) && key <= this.externalRefs.categories.length)
-          this.activateByKey(key - 1);
-      }
-    };
+    if (CONFIG.openLastVisitedTab)
+      window.onbeforeunload = () => this.saveCurrentTab();
+  }
+
+  saveCurrentTab() {
+    localStorage.lastVisitedTab = this.currentTabIndex;
+  }
+
+  openLastVisitedTab() {
+    if (!CONFIG.openLastVisitedTab) return;
+    this.activateByKey(localStorage.lastVisitedTab);
+  }
+
+  handleTabChange(tab) {
+    this.activateByKey(Number(tab.getAttribute('tab-index')));
+  }
+
+  handleKeyPress(event) {
+    if (!event) return;
+
+    let { key } = event;
+
+    if (Number.isInteger(parseInt(key)) && key <= this.externalRefs.categories.length)
+      this.activateByKey(key - 1);
   }
 
   activateByKey(key) {
+    this.currentTabIndex = key;
+
     this.activate(this.refs.tabs, this.refs.tabs[key]);
     this.activate(this.externalRefs.categories, this.externalRefs.categories[key]);
+  }
+
+  setupModal() {
+    this.modal
+      .setTitle('Create New Tab')
+      .setContent(`
+        <p>WIP</p>
+    `);
+  }
+
+  addNewTab() {
+    this.setupModal();
+    this.modal.activate();
   }
 
   createTabs() {
@@ -234,6 +277,8 @@ class Statusbar extends Component {
     this.render().then(() => {
       this.createTabs();
       this.setEvents();
+      this.setAttributes();
+      this.openLastVisitedTab();
     });
   }
 }

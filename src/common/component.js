@@ -6,12 +6,13 @@ class Component extends HTMLElement {
   resources = {
     fonts: {
       roboto: '<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">',
-      nunito: '<link href="https://fonts.googleapis.com/css?family=Nunito:200" rel="stylesheet">'
+      nunito: '<link href="https://fonts.googleapis.com/css?family=Nunito:200" rel="stylesheet">',
+      raleway: '<link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">'
     },
     icons: {
       material: '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">',
-      cryptofont: '<link rel="stylesheet" href="https://cdn.cryptofonts.com/1.3.5/cryptofont.css">',
-      tabler: '<link rel="stylesheet" href="https://unpkg.com/@tabler/icons@1.53.0/iconfont/tabler-icons.min.css">'
+      cryptofont: '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/monzanifabio/cryptofont/cryptofont.css">',
+      tabler: '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">'
     },
     libs: {
       awoo: '<link rel="stylesheet" type="text/css" href="src/css/awoo.min.css">'
@@ -80,13 +81,14 @@ class Component extends HTMLElement {
   createRef() {
     return new Proxy(this.refs, {
       get: (target, prop) => {
-        const elems = this.shadow.querySelectorAll(target[prop]);
+        const ref = target[prop];
+        const elems = this.shadow.querySelectorAll(ref);
 
         if (elems.length > 1) return elems;
 
         const element = elems[0];
 
-        if (!element) return target[prop];
+        if (!element) return ref;
 
         return element;
       },

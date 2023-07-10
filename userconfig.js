@@ -4,11 +4,15 @@ const CONFIG = new Config({
     currency: 'USD',
     refreshIn: 10
   },
+  overrideStorage: true, // override localStorage with fixed userconfig values
   temperature: {
     location: 'Brasília',
     scale: 'C'
   },
-  clock: 'hi',
+  clock: {
+    format: 'h:i',
+    iconColor: '#ff7b95'
+  },
   search: {
     engines: {
       g: ['https://google.com/search?q=', 'Google'],
@@ -18,7 +22,12 @@ const CONFIG = new Config({
       w: ['https://en.wikipedia.org/w/index.php?search=', 'Wikipedia']
     }
   },
+  keybindings: {
+    "t": 'todo-list',
+    "s": 'search-bar'
+  },
   disabled: ['todo-list', 'search-bar', 'crypto-rate'],
+  openLastVisitedTab: true,
   tabs: [
     {
       name: '家',
@@ -58,6 +67,10 @@ const CONFIG = new Config({
           {
             name: 'prime video',
             url: 'https://www.primevideo.com/'
+          },
+          {
+            name: 'cvnflix',
+            url: 'https://plex.cvnflix.com/web/index.html#'
           }
         ]
       },
@@ -69,16 +82,24 @@ const CONFIG = new Config({
             url: 'https://github.com/',
           },
           {
-            name: 'notion',
-            url: 'https://www.notion.so/'
-          },
-          {
             name: 'dev.to',
             url: 'https://dev.to'
           },
           {
+            name: 'radarr',
+            url: 'https://radarr.cvnflix.com/'
+          },
+          {
+            name: 'sonarr',
+            url: 'https://sonarr.cvnflix.com/'
+          },
+          {
             name: 'overseerr',
             url: 'https://overseerr.cvnflix.com/'
+          },
+          {
+            name: 'pocket',
+            url: 'https://getpocket.com/saves'
           }
         ]
       }
@@ -131,6 +152,18 @@ const CONFIG = new Config({
             {
               name: 'coursera',
               url: 'https://www.coursera.org/'
+            },
+            {
+              name: 'the algorithms',
+              url: ' https://the-algorithms.com/'
+            },
+            {
+              name: 'neetcode',
+              url: 'https://neetcode.io'
+            },
+            {
+              name: 'fullstackopen',
+              url: 'https://fullstackopen.com/en/'
             }
           ]
         }
@@ -181,6 +214,10 @@ const CONFIG = new Config({
             {
               name: 'color picker',
               url: 'https://colorpicker.me'
+            },
+            {
+              name: 'dev resources',
+              url: 'https://devresourc.es/'
             }
           ]
         }
