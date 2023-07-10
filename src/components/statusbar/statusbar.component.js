@@ -108,7 +108,7 @@ class Statusbar extends Component {
       #tabs ul li[active]:nth-child(5) ~ li:last-child { margin: 0 0 0 140px; }
 
       #tabs ul li[active]:nth-child(2) ~ li:last-child {
-          --flavour: #16a2a2;
+          --flavour: #fcb3a3;
       }
 
       #tabs ul li[active]:nth-child(3) ~ li:last-child {
@@ -193,6 +193,7 @@ class Statusbar extends Component {
     return `
         <div id="tabs">
             <cols>
+
                 <button class="+ add-tab">
                   <span class="material-icons add-tab-icon">add</span>
                 </button>

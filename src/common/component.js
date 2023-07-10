@@ -102,6 +102,7 @@ class Component extends HTMLElement {
   async render() {
     this.shadow.innerHTML = await this.buildHTML();
     this.refs = this.createRef();
+
     RenderedComponents[this.localName] = this;
   }
 }
