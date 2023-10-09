@@ -36,8 +36,8 @@ const CONFIG = new Config({
         name: 'social',
         links: [
           {
-            url: 'https://twitter.com/home',
-            name: 'twitter'
+            name: 'twitter',
+            url: 'https://twitter.com/home'
           },
           {
             name: 'reddit',
@@ -67,10 +67,6 @@ const CONFIG = new Config({
           {
             name: 'prime video',
             url: 'https://www.primevideo.com/'
-          },
-          {
-            name: 'cvnflix',
-            url: 'https://plex.cvnflix.com/web/index.html#'
           }
         ]
       },
@@ -86,16 +82,16 @@ const CONFIG = new Config({
             url: 'https://dev.to'
           },
           {
-            name: 'radarr',
-            url: 'https://radarr.cvnflix.com/'
+            name: 'medium',
+            url: 'https://medium.com/'
           },
           {
-            name: 'sonarr',
-            url: 'https://sonarr.cvnflix.com/'
+            name: 'moodle',
+            url: 'https://lms.infnet.edu.br/moodle/'
           },
           {
-            name: 'overseerr',
-            url: 'https://overseerr.cvnflix.com/'
+            name: 'repl.it',
+            url: 'https://replit.com/teams'
           },
           {
             name: 'pocket',
@@ -156,14 +152,23 @@ const CONFIG = new Config({
             {
               name: 'the algorithms',
               url: ' https://the-algorithms.com/'
+            }
+          ]
+        },
+        {
+          name: 'coding',
+          links: [
+            {
+              name: 'leetcode',
+              url: 'https://leetcode.com/'
             },
             {
               name: 'neetcode',
               url: 'https://neetcode.io'
             },
             {
-              name: 'fullstackopen',
-              url: 'https://fullstackopen.com/en/'
+              name: 'codewars',
+              url: 'https://www.codewars.com/dashboard'
             }
           ]
         }
@@ -202,12 +207,10 @@ const CONFIG = new Config({
             name: 'others',
             links: [
             {
-              name: 'codewars',
-              url: 'https://www.codewars.com/dashboard'
-            },            {
               name: 'keybr',
               url: 'https://www.keybr.com/'
-            },            {
+            },
+            {
               name: 'ezgif',
               url: 'https://ezgif.com/'
             },
