@@ -90,12 +90,12 @@ const CONFIG = new Config({
             url: 'https://lms.infnet.edu.br/moodle/'
           },
           {
-            name: 'repl.it',
-            url: 'https://replit.com/teams'
+            name: 'infnet',
+            url: 'https://infnet.online/'
           },
           {
-            name: 'pocket',
-            url: 'https://getpocket.com/saves'
+            name: 'docs',
+            url: 'https://docs.google.com/'
           }
         ]
       }
@@ -165,6 +165,10 @@ const CONFIG = new Config({
             {
               name: 'neetcode',
               url: 'https://neetcode.io'
+            },
+            {
+              name: 'beecrowd',
+              url: 'https://judge.beecrowd.com'
             },
             {
               name: 'codewars',
